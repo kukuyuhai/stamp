@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+	title #{title}
+
+body
+	.container
+		.row
+			.col-md-6.col-md-offset-3
+				form(method="POST" action="/user/signin")
+					.form-group
+						label(for="signinName") username
+						input#signinName.form-control(name="user[name]",type="text")
+					.form-group
+						label(for="signinPassword") password
+						input#signinPassword.form-control(name="user[password]",type="text")
+					.form-group
+						input.btn.btn-warning.form-control(type='submit',value="submit")
